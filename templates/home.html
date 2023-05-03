@@ -11,8 +11,11 @@
    
      <script>
        $(document).ready(function(){
-          $("button").click(function(){
-             $("#div1").load("/t");
+          $("#btn").click(function(){
+            var strh = $("#inph").val();
+            var strp = $('#inpp').val();
+            const strs = [strh, strp];
+            $("#div1").load("/t", strs);
         });
       });
      </script>
@@ -21,12 +24,18 @@
 
     <div id="div1">
       <h2>Div 1</h2>
-      <p>The contents of this div will be replaced with new content from the server.</p>
+      <p>The contents of this div will be replaced with new content from textboxes below:</p>
     </div>
-
-    <button>Update div 1</button>
+    
+    <div id="div2">
+      <p>Header Text:</p>
+      <input type="text" id="inph">
+      <p>Paragraph Text:</p>
+      <input type="text" id="inpp">
+      <button type="button" id="btn">Load New Content</button>
+    </div>
    
-   <div id="div2">
+   <div id="div3">
       <h2>This text isn't updated.</h2>
     </div>
 
