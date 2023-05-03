@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.debug = True #Change this to False for production
 
 @app.route('/t', methods=['POST'])
-def t():
+def t(strs):
     print(strs)
     return Markup('<h2>New div1</h2> <p>This is the new content, from the server</p>')
 
