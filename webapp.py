@@ -7,7 +7,7 @@ app.debug = True #Change this to False for production
 
 @app.route('/t')
 def t():
-    return Markup('This is the new content, from the server')
+    return Markup('<h2>New div1</h2> <p>This is the new content, from the server</p>')
 
 @app.route('/')
 def home():
