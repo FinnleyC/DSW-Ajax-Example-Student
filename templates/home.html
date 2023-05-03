@@ -14,7 +14,10 @@
           $("#btn").click(function(){
             var strh = $("#inph").val();
             var strp = $('#inpp').val();
-            const strs = [strh, strp];
+            const strs = {
+              head: strh,
+              body: strp,
+            };
             alert(strs);
             $("#div1").load("/t", strs);
         });
